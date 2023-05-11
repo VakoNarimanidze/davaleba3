@@ -5,9 +5,13 @@
 }
 body{
     background: rgba(25, 26, 29, 1);
+    max-width: 100%;
+}
+.boxContainer{
+    width: 100%;
 }
 
-.boxContainer{
+.boxes{
     background: rgba(47, 48, 50, 1);
     height: 221px;
     width: 923px;
@@ -16,23 +20,10 @@ body{
     align-content: center;
     justify-content: center;
     margin: 0 auto;
-   border-top: 0;
-   border-bottom: 0;
-   border-right: 0;
-   border-left: 10px solid;
-    border-left-color: rgba(242, 201, 76, 1);
     margin-bottom: 50px;
 }
-.boxContainer:first-child{
-    border-left-color: rgba(0, 204, 153, 1);;
-}
-.boxContainer:nth-child(2){
-    border-left-color: rgba(235, 87, 87, 1);
-}
-.boxContainer:last-child{
-    border-left-color: rgba(84, 88, 247, 1) ;
-}
-.boxContainer h2{
+
+.boxes h2{
     height: 43px;
     width: 149px;
     font-family: Poppins;
@@ -43,7 +34,7 @@ body{
     margin-top: 50px;
     margin-bottom: 10px;
 }
-.boxContainer p {
+.boxes p {
     height: 72px;
     width: 606px;   
     font-family: Poppins;
@@ -53,7 +44,7 @@ body{
     letter-spacing: 0em;
     text-align: left;
 }
-.boxContainer img{
+.boxes .vector{
     width: 100px;
     height: 100px;
     margin-top: 50px;
@@ -61,4 +52,51 @@ body{
 .flex{
     margin-left: 40px;
     color: rgba(255, 255, 255, 1);
+}
+.relative{
+    position: relative;
+}
+.circle{
+    position: absolute;
+    margin-left: 13px;
+    margin-top: 63px;
+    z-index: 1;
+}
+
+/* .beforeDiv::before{
+    content: '';
+    display: inline-block;
+    border-radius: 10px;
+    top: 0;
+    margin-right:170px ;
+    height: 221px;
+    width: 10px;
+}
+
+.beforeDiv:nth-child(1):before{
+    background-color:rgba(0, 204, 153, 1) ;
+}
+.beforeDiv:nth-child(2):before {
+    background-color: red;
+} */
+
+.boxes:last-child::before{
+    content: '';
+    display: inline-block;
+    border-radius: 10px;
+    margin-right: 170px;
+    height: 221px;
+    width: 10px;
+    background-color: red   ;
+}
+
+.boxes:nth-child(3)::before{
+    content: '';
+    display: inline-block;
+    border-radius: 10px;
+    top: 0;
+    margin-right: 170px;
+    height: 221px;
+    width: 10px;
+    background-color: blue
 }
